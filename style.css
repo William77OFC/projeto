@@ -53,7 +53,7 @@ body * {
   background: white var(--switch-bg-url) no-repeat center;
   border: 0;
   border-radius: 50%;
-
+  cursor: pointer;
   position: absolute;
   z-index: 1;
   top: 50%;
