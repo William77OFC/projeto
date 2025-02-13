@@ -11,6 +11,8 @@ body {
   height: 100%; /* Garante que o corpo ocupe toda a altura da tela */
   overflow-x: hidden; /* Impede a rolagem horizontal */
   overflow-y: auto; /* Permite rolagem vertical, mas sem exceder */
+  background-color: black; /* Fundo preto para toda a área visível, inclusive fora do conteúdo */
+  color: white; /* Cor do texto para contraste */
 }
 
 /* Definições de Variáveis para Temas */
