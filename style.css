@@ -33,7 +33,6 @@ body {
   height: 100%; /* Garante que a altura também seja 100% */
   margin: 0; /* Remover qualquer margem extra */
   padding: 0; /* Remover qualquer padding extra */
-  overflow-x: hidden !important;
 }
 
 body * {
@@ -47,7 +46,7 @@ body * {
   max-width: 588px;
   margin: 56px auto 0;
   padding: 0 24px;
-  box-sizing: border-box;
+  box-sizing: border-box; /* Garante que o padding não afete a largura total */
 }
 
 /* Alternador de Tema (Switch) */
@@ -138,6 +137,8 @@ ul li a {
   text-decoration: none;
   font-weight: 500;
   transition: background 0.3s;
+  width: 100%; /* Garante que os links ocupem 100% da largura disponível */
+  box-sizing: border-box; /* Garante que o padding não afete a largura total */
 }
 
 /* Efeito de Hover nos Links */
@@ -185,10 +186,9 @@ footer {
   }
 }
 
-/* Para dispositivos grandes, permitir que o container ocupe mais espaço */
 @media (min-width: 1024px) {
   #container {
-    padding: 0 50px; /* Aumenta o padding nas telas maiores, se necessário */
+    padding: 0 24px;
   }
 }
 
