@@ -5,6 +5,14 @@
   box-sizing: border-box;
 }
 
+/* Garantir que o corpo ocupe toda a altura da tela */
+html,
+body {
+  height: 100%; /* Garante que o corpo ocupe toda a altura da tela */
+  overflow-x: hidden; /* Impede a rolagem horizontal */
+  overflow-y: auto; /* Permite rolagem vertical, mas sem exceder */
+}
+
 /* Definições de Variáveis para Temas */
 :root {
   --text-color: white;
@@ -29,10 +37,7 @@
 /* Corpo e Estilos Globais */
 body {
   background: var(--bg-url) no-repeat top center/cover;
-  width: 100%; /* Garante que o fundo cubra toda a largura da tela */
-  height: 100%; /* Garante que a altura também seja 100% */
-  margin: 0; /* Remover qualquer margem extra */
-  padding: 0; /* Remover qualquer padding extra */
+  background-attachment: fixed; /* Evita que o fundo "se mova" ao rolar */
 }
 
 body * {
@@ -46,7 +51,9 @@ body * {
   max-width: 588px;
   margin: 56px auto 0;
   padding: 0 24px;
-  box-sizing: border-box; /* Garante que o padding não afete a largura total */
+  min-height: 100%; /* Garante que o conteúdo ocupe a altura total da tela */
+  display: flex;
+  flex-direction: column;
 }
 
 /* Alternador de Tema (Switch) */
@@ -137,8 +144,6 @@ ul li a {
   text-decoration: none;
   font-weight: 500;
   transition: background 0.3s;
-  width: 100%; /* Garante que os links ocupem 100% da largura disponível */
-  box-sizing: border-box; /* Garante que o padding não afete a largura total */
 }
 
 /* Efeito de Hover nos Links */
@@ -183,12 +188,6 @@ footer {
 
   .light {
     --bg-url: url(./assets/assets/bg-desktop-light.jpg);
-  }
-}
-
-@media (min-width: 1024px) {
-  #container {
-    padding: 0 24px;
   }
 }
 
