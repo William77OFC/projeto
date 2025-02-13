@@ -5,16 +5,6 @@
   box-sizing: border-box;
 }
 
-/* Garantir que o corpo ocupe toda a altura da tela */
-html,
-body {
-  height: 100%; /* Garante que o corpo ocupe toda a altura da tela */
-  overflow-x: hidden; /* Impede a rolagem horizontal */
-  overflow-y: auto; /* Permite rolagem vertical, mas sem exceder */
-  background-color: black; /* Fundo preto para toda a área visível, inclusive fora do conteúdo */
-  color: white; /* Cor do texto para contraste */
-}
-
 /* Definições de Variáveis para Temas */
 :root {
   --text-color: white;
@@ -24,8 +14,11 @@ body {
   --surface-color-hover: rgba(0, 0, 0, 0.02);
   --highlight-color: rgba(255, 255, 255, 0.2);
   --switch-bg-url: url(./assets/assets/moon-stars.svg);
+  --profile-img-dark: url(./assets/assets/Avatar.png); /* Imagem de perfil no tema escuro */
+  --profile-img-light: url(./assets/assets/Avatar-light.png); /* Imagem de perfil no tema claro */
 }
 
+/* Tema Claro */
 .light {
   --text-color: black;
   --bg-url: url(./assets/assets/bg-mobile-light.jpg);
@@ -34,12 +27,17 @@ body {
   --surface-color-hover: rgba(0, 0, 0, 0.02);
   --highlight-color: rgba(0, 0, 0, 0.1);
   --switch-bg-url: url(./assets/assets/sun.svg);
+  --profile-img: var(
+    --profile-img-light
+  ); /* Alteração da imagem para o tema claro */
 }
 
 /* Corpo e Estilos Globais */
 body {
-  background: var(--bg-url) no-repeat top center/cover;
-  background-attachment: fixed; /* Evita que o fundo "se mova" ao rolar */
+  background-image: var(--bg-url);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
 }
 
 body * {
@@ -53,9 +51,33 @@ body * {
   max-width: 588px;
   margin: 56px auto 0;
   padding: 0 24px;
-  min-height: 100%; /* Garante que o conteúdo ocupe a altura total da tela */
-  display: flex;
-  flex-direction: column;
+}
+
+/* Seção de Perfil */
+#profile {
+  text-align: center;
+  padding: 24px;
+}
+
+#profile img {
+  width: 112px;
+  content: url(var(
+    --profile-img
+  )); /* Aplica a variável correta para a imagem */
+}
+
+#profile p {
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  margin-top: 8px;
+}
+
+#about-me {
+  font-style: italic;
+  font-weight: 250;
+  line-height: 24px;
+  margin-top: 8px;
 }
 
 /* Alternador de Tema (Switch) */
@@ -98,30 +120,6 @@ body * {
   backdrop-filter: blur(4px);
   -webkit-backdrop-filter: blur(4px);
   box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.1);
-}
-
-/* Seção de Perfil */
-#profile {
-  text-align: center;
-  padding: 24px;
-}
-
-#profile img {
-  width: 112px;
-}
-
-#profile p {
-  font-style: normal;
-  font-weight: 400;
-  line-height: 24px;
-  margin-top: 8px;
-}
-
-#about-me {
-  font-style: italic;
-  font-weight: 250;
-  line-height: 24px;
-  margin-top: 8px;
 }
 
 /* Estilos para Links */
