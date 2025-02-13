@@ -8,4 +8,5 @@ function toggleMode() {
   } else {
     profileImage.src = "./assets/assets/avatar.png" // Imagem para o modo escuro
   }
+
 }
