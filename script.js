@@ -1,12 +1,12 @@
 function toggleMode() {
-  document.body.classList.toggle("light")
+  const html = document.documentElement
+  html.classList.toggle("light")
 
-  // Troca a imagem de perfil
-  const profileImage = document.getElementById("profile-img")
-  if (document.body.classList.contains("light")) {
-    profileImage.src = "./assets/assets/avatar-light.png" // Imagem para o modo claro
+  const img = document.querySelector("#profile img")
+
+  if (html.classList.contains("light")) {
+    img.setAttribute("src", "./assets/assets/avatar-light.png")
   } else {
-    profileImage.src = "./assets/assets/avatar.png" // Imagem para o modo escuro
+    img.setAttribute("src", "./assets/assets/avatar.png")
   }
-
 }
