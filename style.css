@@ -93,7 +93,14 @@ body * {
 
 #profile p {
   font-style: normal;
-  font-weight: 500;
+  font-weight: 400;
+  line-height: 24px;
+  margin-top: 8px;
+}
+
+#about-me {
+  font-style: italic;
+  font-weight: 250;
   line-height: 24px;
   margin-top: 8px;
 }
