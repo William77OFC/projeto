@@ -14,11 +14,8 @@
   --surface-color-hover: rgba(0, 0, 0, 0.02);
   --highlight-color: rgba(255, 255, 255, 0.2);
   --switch-bg-url: url(./assets/assets/moon-stars.svg);
-  --profile-img-dark: url(./assets/assets/Avatar.png); /* Imagem de perfil no tema escuro */
-  --profile-img-light: url(./assets/assets/Avatar-light.png); /* Imagem de perfil no tema claro */
 }
 
-/* Tema Claro */
 .light {
   --text-color: black;
   --bg-url: url(./assets/assets/bg-mobile-light.jpg);
@@ -27,9 +24,6 @@
   --surface-color-hover: rgba(0, 0, 0, 0.02);
   --highlight-color: rgba(0, 0, 0, 0.1);
   --switch-bg-url: url(./assets/assets/sun.svg);
-  --profile-img: var(
-    --profile-img-light
-  ); /* Alteração da imagem para o tema claro */
 }
 
 /* Corpo e Estilos Globais */
@@ -61,9 +55,6 @@ body * {
 
 #profile img {
   width: 112px;
-  content: url(var(
-    --profile-img
-  )); /* Aplica a variável correta para a imagem */
 }
 
 #profile p {
