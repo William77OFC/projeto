@@ -5,7 +5,7 @@
 </p>
 
 <p align="center">
-  O **DevLinks** é um projeto desenvolvido pela **Rocketseat** para ser o seu cartão de visitas digital, agregando todos os links importantes em um único lugar. <br/>
+  Programa gratuito e exclusivo da Rocketseat, voltado ao ensino de tecnologias WEB, com ênfase no aprendizado prático e atualização constante de conteúdos  <br/>
   <a href="https://www.rocketseat.com.br/discover" target="_blank"><strong>Estude esse projeto em formato de vídeo clicando aqui.</strong></a>
 </p>
 
