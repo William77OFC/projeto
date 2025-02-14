@@ -1,7 +1,7 @@
 <h1 align="center"> DevLinks </h1>
 
 <p align="center">
-  <img alt="" src="./assets/assets/rocketseat.svg" width="200px">
+  <img alt="" src="./assets/rocketseat.svg" width="200px">
 </p>
 
 <p align="center">
